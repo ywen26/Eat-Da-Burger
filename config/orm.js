@@ -30,7 +30,7 @@ function obToSql(ob) {
 // Object for all SQL statement functions
 var orm = {
     // Function to view all values
-    all: function(tableINput, cb) {
+    selectAll: function(tableINput, cb) {
         var queryString = "SELECT * FROM " + tableINput + ";";
         connection.query(queryString, function(err, result) {
             if (err) {
@@ -41,7 +41,7 @@ var orm = {
     },
 
     // Function to insert new value
-    create: function(table, cols, vals, cb) {
+    insertOne: function(table, cols, vals, cb) {
         var queryString = "INSERT INTO" + table;
 
         queryString += " (";
@@ -62,7 +62,7 @@ var orm = {
     },
 
     // Funciton to update existing value
-    update: function(table, objColVals, condition, cb) {
+    updateOne: function(table, objColVals, condition, cb) {
         var queryString = "UPDATE " + table;
 
         queryString += " SET ";
