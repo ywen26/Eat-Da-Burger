@@ -1,0 +1,30 @@
+<img class="picture" src="/public/assets/img/burger.jpg" />
+
+<h1>Eat Da burgers!</h1>
+
+<ol>
+    <div class="burger-list">
+        {{#each burgers}}
+            {{#unless devoured}}
+            {{> burgers/burger-block devoured=true}}
+            {{/unless}}
+        {{/each}}
+    </div>
+</ol>
+
+<ol>
+    <div class="devoured-list">
+        {{#each burgers}}
+            {{#if devoured}}
+            {{> burgers/burger-block sleep=false}}
+            {{/if}}
+        {{/each}}
+    </div>
+</ol>
+
+<form class="submit-form">
+    <div class="submit-area">
+        <textarea></textarea>
+        <button type="submit">Submit</button>
+    </div>
+</form>
