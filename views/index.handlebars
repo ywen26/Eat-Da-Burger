@@ -16,7 +16,7 @@
     <div class="devoured-list">
         {{#each burgers}}
             {{#if devoured}}
-            {{> burgers/burger-block sleep=false}}
+            {{> burgers/burger-block devoured=false}}
             {{/if}}
         {{/each}}
     </div>
@@ -24,7 +24,9 @@
 
 <form class="submit-form">
     <div class="submit-area">
-        <textarea></textarea>
-        <button type="submit">Submit</button>
+        <label for="bg">Burger Name:</label>
+        <input type="text" id="bg" name="name">
     </div>
+
+    <button type="submit">Submit</button>
 </form>

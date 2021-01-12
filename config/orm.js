@@ -42,7 +42,7 @@ var orm = {
 
     // Function to insert new value
     insertOne: function(table, cols, vals, cb) {
-        var queryString = "INSERT INTO" + table;
+        var queryString = "INSERT INTO " + table;
 
         queryString += " (";
         queryString += cols.toString();
