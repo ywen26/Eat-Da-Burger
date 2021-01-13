@@ -1,26 +1,31 @@
-<img class="picture" src="/assets/img/burger.jpg" />
+<img class="picture" src="/assets/img/hb2.jpeg" />
 
 <h1>Eat Da burgers!</h1>
 
-<ol>
-    <div class="burger-list">
-        {{#each burgers}}
-            {{#unless devoured}}
-            {{> burgers/burger-block devoured=true}}
-            {{/unless}}
-        {{/each}}
+<div class="all-list">
+    <div>
+        <h2>On Menu:</h2>
+        <div class="new-add">
+            {{#each burgers}}
+                {{#unless devoured}}
+                {{> burgers/burger-block devoured=true}}
+                {{/unless}}
+            {{/each}}
+        </div>   
     </div>
-</ol>
 
-<ol>
-    <div class="devoured-list">
-        {{#each burgers}}
-            {{#if devoured}}
-            {{> burgers/burger-block devoured=false}}
-            {{/if}}
-        {{/each}}
+    <div>
+        <h2>Devoured List:</h2>
+        <div class="devoured">
+            {{#each burgers}}
+                {{#if devoured}}
+                {{> burgers/burger-block devoured=false}}
+                {{/if}}
+            {{/each}}
+        </div>
     </div>
-</ol>
+</div>
+
 
 <form class="submit-form">
     <div class="submit-area">
@@ -28,5 +33,5 @@
         <input type="text" id="bg" name="name">
     </div>
 
-    <button type="submit">Submit</button>
+    <button id="submit-button" type="submit">Submit</button>
 </form>
