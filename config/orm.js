@@ -78,6 +78,21 @@ var orm = {
             }
             cb(result);
         });
+    },
+
+    // Function to remove selected value
+    deleteOne: function(table, condition, cb) {
+        var queryString = "DELETE FROM " + table;
+
+        queryString += " WHERE ";
+        queryString += condition;
+
+        connection.query(queryString, function(err, result) {
+            if (err) {
+                throw err;
+            }
+            cb(result);
+        });
     }
 }
 
