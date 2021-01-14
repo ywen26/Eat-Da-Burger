@@ -36,11 +36,16 @@ h2 {
     text-align: center;
 }
 
-p {
+.list {
     text-align: center;
     padding: 5px 10px 5px 10px;
     background-color: lightgrey;
     border-style: groove;
+    font-size: 120%;
+}
+
+p {
+    margin-bottom: 5px;
     font-size: 120%;
 }
 
@@ -49,6 +54,12 @@ p {
     flex-direction: column;
     align-items: center;
     margin-top: 30px;
+}
+
+.submit-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #submit-button {
@@ -61,12 +72,23 @@ p {
     cursor: pointer;
 }
 
-label, #bg {
+#bg {
     font-size: 120%;
-    padding-left: 3px;
+    padding: 5px 3px 5px 3px;
 }
 
 .change-devoured {
-    padding: 0 3px 0 3px;
+    padding: 3px 5px 3px 5px;
     cursor: pointer;
+    background-color: rgb(23, 199, 23);
+    color: white;
+    border-radius: 3px;
+}
+
+.clear-devoured {
+    padding: 3px 5px 3px 5px;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    border-radius: 3px;
 }
