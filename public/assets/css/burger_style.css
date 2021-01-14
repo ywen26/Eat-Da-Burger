@@ -28,12 +28,12 @@ h1 {
     padding: 20px 0 20px 0;
 }
 
-.burger-list {
-    margin-top: 12px;
-}
-
 h2 {
     text-align: center;
+}
+
+.burger-list {
+    margin-top: 12px;
 }
 
 .list {
@@ -42,39 +42,6 @@ h2 {
     background-color: lightgrey;
     border-style: groove;
     font-size: 120%;
-}
-
-p {
-    margin-bottom: 5px;
-    font-size: 120%;
-}
-
-.submit-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
-}
-
-.submit-area {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#submit-button {
-    margin-top: 10px;
-    margin-bottom: 200px;
-    padding: 7px 15px 7px 15px;
-    background-color: rgb(11, 109, 189);
-    color: white;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
-#bg {
-    font-size: 120%;
-    padding: 5px 3px 5px 3px;
 }
 
 .change-devoured {
@@ -91,4 +58,37 @@ p {
     background-color: red;
     color: white;
     border-radius: 3px;
+}
+
+.submit-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.submit-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    margin-bottom: 5px;
+    font-size: 120%;
+}
+
+#bg {
+    font-size: 120%;
+    padding: 5px 3px 5px 3px;
+}
+
+#submit-button {
+    margin-top: 10px;
+    margin-bottom: 200px;
+    padding: 7px 15px 7px 15px;
+    background-color: rgb(11, 109, 189);
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
 }

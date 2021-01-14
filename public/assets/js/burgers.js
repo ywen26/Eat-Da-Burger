@@ -1,4 +1,6 @@
+// Connect the database functions to buttons
 $(function() {
+    // Make devoured function to buttons of menu list
     $(".change-devoured").on("click", function(event) {
         var id = $(this).data("id");
         var newDevoured = $(this).data("devoured");
@@ -7,53 +9,47 @@ $(function() {
             devoured: newDevoured
         };
     
-        // Send the PUT request.
         $.ajax("/api/burgers/" + id, {
             type: "PUT",
             data: newDevouredState
         }).then(
             function() {
                 console.log("changed devoured to", newDevoured);
-                // Reload the page to get the updated list
                 location.reload();
             }
         );
     });
   
+    // Make function to submit button to add new burgers
     $(".submit-form").on("submit", function(event) {
-      // Make sure to preventDefault on a submit event.
         event.preventDefault();
   
         var newBurger = {
             burger_name: $("#bg").val().trim(),
-            // sleepy: $("[name=sleepy]:checked").val().trim()
         };
     
-        // Send the POST request.
         $.ajax("/api/burgers", {
             type: "POST",
             data: newBurger
         }).then(
             function() {
                 console.log("created new burger");
-                // Reload the page to get the updated list
                 location.reload();
             }
         );
     });
   
+    // Make remove function to the buttons of devoured list
     $(".clear-devoured").on("click", function(event) {
-      var id = $(this).data("id");
+        var id = $(this).data("id");
   
-      // Send the DELETE request.
-      $.ajax("/api/burgers/" + id, {
-        type: "DELETE"
-      }).then(
-        function() {
-          console.log("deleted burger", id);
-          // Reload the page to get the updated list
-          location.reload();
-        }
-      );
+        $.ajax("/api/burgers/" + id, {
+            type: "DELETE"
+        }).then(
+            function() {
+                console.log("deleted burger", id);
+                location.reload();
+            }
+        );
     });
-  });
+});
